@@ -91,7 +91,7 @@
 				throw new \Exception("You must specify both left and right importing manager bussiness objects either by ClsID or by API Bussiness object name.");
 			$resultGetter = $this->resultGetter;
 			if($this->intoDocumentId !== null && !$this->isClsid($this->fromBussinessObject)) {
-				$resultGetter->setPutMethod();
+				$resultGetter->usePutMethod();
 			}
 			return $this->resultGetter->getResult($this->getApiEndpoint(), $this->getQuery());
 		}
